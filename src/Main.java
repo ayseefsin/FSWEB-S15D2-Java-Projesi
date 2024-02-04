@@ -20,6 +20,7 @@ public class Main {
         Task t6 = new Task("aysin", "social media","unassigned" ,Priority.HIGH,Status.IN_QUEUE);
         Task t7 = new Task("library", "virtual library","ann", Priority.HIGH, Status.ASSIGNED);
         Task t8 = new Task("hospital","construction", "bob" ,Priority.HIGH,Status.ASSIGNED);
+        Task t9 = new Task("hospital","construction", "ann" ,Priority.HIGH,Status.ASSIGNED);
         TaskData.makeAssigned(t1);
         TaskData.makeAssigned(t2);
         TaskData.makeAssigned(t3);
@@ -28,6 +29,7 @@ public class Main {
         TaskData.makeAssigned(t6);
         TaskData.makeAssigned(t7);
         TaskData.makeAssigned(t8);
+        TaskData.makeAssigned(t9);
         System.out.println("All project" + (TaskData.getUnion(TaskData.getAnnsTasks(),TaskData.getBobsTasks(),
                 TaskData.getBobsTasks(),TaskData.getUnAssignedTasks())));
         System.out.println("*******************************");
@@ -36,6 +38,8 @@ public class Main {
         System.out.println("Unassigned Tasks: " + TaskData.getUnAssignedTasks()) ;
         System.out.println("*******************************");
         System.out.println("difference" + TaskData.getDifference(TaskData.getBobsTasks(),TaskData.getCarolsTasks()));
+        System.out.println("*******************************");
+        System.out.println("intersection" + TaskData.getIntersection(TaskData.getBobsTasks(), TaskData.getAnnsTasks()));
 
 
 

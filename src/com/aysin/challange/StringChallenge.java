@@ -22,9 +22,9 @@ public class StringChallenge {
                 "Alice's Adventures Under Ground and includes episodes, such as the Mad Tea-Party, " +
                 "that did not appear in the manuscript. The only known manuscript copy of Under Ground " +
                 "is held in the British Library. Macmillan published a facsimile of the manuscript in 1886.";
-        string.replaceAll("."," ");
-        string.replaceAll(","," ");
-        string.replaceAll("!"," ");
+        string.replace(".","");
+        string.replaceAll(",","");
+        string.replaceAll("!","");
         System.out.println("string: " + string);
     }
 

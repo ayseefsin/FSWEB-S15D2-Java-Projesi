@@ -40,6 +40,12 @@ public class TaskData {
         return difference;
     }
 
+    public static Set<Task> getIntersection(Set<Task> set1 , Set<Task> set2){
+        Set<Task> intersection = new HashSet<>(set1);
+        intersection.retainAll(set2);
+        return intersection;
+    }
+
     public static Set<Task> getTasks(String string){
         if(string.equalsIgnoreCase("ann")){
             return annsTasks;
