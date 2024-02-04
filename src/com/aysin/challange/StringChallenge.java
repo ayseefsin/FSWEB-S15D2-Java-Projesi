@@ -1,5 +1,10 @@
 package com.aysin.challange;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
 public class StringChallenge {
 
     public static void main(String[] args) {
@@ -22,10 +27,18 @@ public class StringChallenge {
                 "Alice's Adventures Under Ground and includes episodes, such as the Mad Tea-Party, " +
                 "that did not appear in the manuscript. The only known manuscript copy of Under Ground " +
                 "is held in the British Library. Macmillan published a facsimile of the manuscript in 1886.";
-        string.replace(".","");
-        string.replaceAll(",","");
-        string.replaceAll("!","");
-        System.out.println("string: " + string);
+
+        String newString =  string.replaceAll("[.?!\"]","");
+        String[] words = newString.split(" ");
+        System.out.println("before process: " + words.length);
+        Set<String> uniqueWords = new TreeSet<>(Arrays.asList(words));
+        System.out.println("after process: " + uniqueWords.size());
+        System.out.println("***************************************");
+        System.out.println("unique words: " + uniqueWords);
+
+
+
+
     }
 
 }
